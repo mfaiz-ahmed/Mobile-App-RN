@@ -29,6 +29,10 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       color: 'white',
     },
+    map: {
+      width: '100%',
+      height: '100%',
+    },
   });
 
 

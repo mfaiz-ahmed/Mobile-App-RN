@@ -1,15 +1,14 @@
 import { useRef, useState } from "react";
 import { View, Text, Button, TouchableOpacity, Image } from "react-native";
 import { CameraView, CameraType, useCameraPermissions } from "expo-camera";
-import styles from "@/Style/Camera";
+import styles from "@/Style/Styles";
 
 export default function camera() {
   const [facing, setFacing] = useState<CameraType>("back");
   const [permission, requestPermission] = useCameraPermissions();
-  const [image, setImage] = useState();
-  const camera = useRef(null);
+  const [image, setImage] = useState<any>();
+  const camera: any = useRef(null); 
 
-  
   if (!permission) {
     // Camera permissions are still loading.
     return <View />;
@@ -54,8 +53,7 @@ export default function camera() {
           </View>
         </CameraView>
       ) : (
-        <Image source={{ uri: image?.uri }}
-        style={{flex : 1}} />
+        <Image source={{ uri: image?.uri }} style={{ flex: 1 }} />
       )}
     </View>
   );
