@@ -45,7 +45,8 @@ const options = {accuracy: 6 , distanceInterval : 0.3}
               latitude: location.coords.latitude,
               longitude: location.coords.longitude,
             }}
-            pinColor="#474744"
+            image={require('../../../Images/images.png')}
+            
             title={"Home"}
             description={"Yahi rehta hun mai"}
           />
